@@ -1,0 +1,149 @@
+<!--/**
+* Created by rohan on 20/9/17.
+*/-->
+
+<!--Banner Start-->
+<div class="container-fluid image-container">
+  <div class="" style="position: relative;">
+    <img class="hidden-xs hidden-sm  img-responsive   backimage0" src="{{ human_image0 }}"/>
+    <img class="visible-xs visible-sm img-responsive backimage1" src="{{ human_image1 }}"/>
+    <div class="">
+      <h1 class="hidden-sm hidden-xs text-center text-capitalize" id="heading1" >
+        {{ human_heading1 }}
+      </h1>
+      <h2 class="hidden-sm hidden-xs text-center" id="heading2">
+        {{ human_heading2 }}
+      </h2>
+    </div>
+  </div>
+</div>
+<!--End Banner-->
+<div class="container contentContainer">
+  <div class="hidden-xs hidden-sm human-wrapper0">
+    <p class="text-center text-upper">{{ human_description0 }}</p>
+  </div>
+  <div class="visible-xs visible-sm human-wrapper1">
+    <p class="text-justify text-upper">{{ human_description0 }}</p>
+  </div>
+</div>
+
+<div class="image-container ">
+  <div class="row image-group">
+    <div class="" *ngFor="let data of human_story_list;  let even= even;let odd= odd; let i=index;">
+      <div class="row " >
+        <div class="row" *ngIf="even" >
+          <div class="col-md-6 col-lg-6 " [class.show]="isClickedOnce" (click)="openDiv0(i); isClickedOnce =false"   >
+            <img class="img-responsive"  [src]="human_story_list[i].image">
+            <h1>{{human_story_list[i].name}}</h1>
+          </div>
+
+          <div class="row image-class visible-xs visible-sm" *ngIf="showHide0[i] && show0 === i"  >
+            <div class="row">
+              <button class="btn btn-uparrow  pull-left glyphicon glyphicon-chevron-up" (click)="openDiv0(i); openDiv2(i)"></button>
+            </div>
+            <br>
+            <div class="col-md-6 col-lg-6" >
+              <img class="img-responsive" [src]="human_story_list[i].human_story_details_more.image_more">
+            </div>
+            <div class="col-md-6 col-lg-6">
+              <p>{{human_story_list[i].human_story_details_more.content_more}}</p>
+              <button type="button" [class.hide]="isClickedOnce" (click)="openDiv2(i); isClickedOnce = true "  class="btn btn-info" >Read More</button>
+            </div>
+            <br>
+          </div>
+          <div class="row visible-xs visible-sm" *ngIf="showHide2[i]">
+            <div class="col-md-6 col-lg-6 pull-right">
+              <img class="img-responsive " [src]="human_story_list[i].human_story_details_less.image_less">
+            </div>
+            <div class="col-md-6 col-lg-6 pull-left">
+              <p class="">{{human_story_list[i].human_story_details_less.content_less}}</p>
+              <button type="button" (click)="openDiv2(i)" class="btn btn-info" >Read Less</button>
+            </div>
+            <br>
+          </div>
+
+          <div class="col-md-6 col-lg-6 " [class.show]="isClickedOnce1" (click)="openDiv1(i); isClickedOnce1 =false"  >
+            <img class="img-responsive"  [src]="human_story_list[i+1].image">
+            <h1>{{human_story_list[i+1].name}}</h1>
+            <h3>{{human_story_list[i+1].designation}}</h3>
+          </div>
+
+          <div class="row image-class visible-xs visible-sm" *ngIf="showHide1[i] && show1 === i">
+            <div class="row">
+              <button class="btn btn-uparrow  pull-left glyphicon glyphicon-chevron-up" (click)="openDiv1(i); openDiv3(i)"></button>
+            </div>
+            <br>
+            <div class="col-md-6 col-lg-6">
+              <img class="img-responsive" [src]="human_story_list[i+1].human_story_details_more.image_more">
+            </div>
+            <div class="col-md-6 col-lg-6">
+              <p>{{human_story_list[i+1].human_story_details_more.content_more}}</p>
+              <button type="button" [class.hide]="isClickedOnce1" (click)="openDiv3(i); isClickedOnce1 = true " class="btn btn-info" >Read More</button>
+            </div>
+            <br>
+          </div>
+          <div class="row visible-xs visible-sm" *ngIf="showHide3[i]">
+            <div class="col-md-6 col-lg-6 pull-right">
+              <img class="img-responsive " [src]="human_story_list[i+1].human_story_details_less.image_less">
+            </div>
+            <div class="col-md-6 col-lg-6 pull-left">
+              <p class="">{{human_story_list[i+1].human_story_details_less.content_less}}</p>
+              <button type="button" (click)="openDiv3(i)" class="btn btn-info" >Read Less</button>
+            </div>
+            <br>
+          </div>
+
+          <div class="row image-class hidden-xs hidden-sm" *ngIf="showHide0[i] && show0 === i"  >
+            <div class="row">
+              <button class="btn btn-uparrow  pull-left 	glyphicon glyphicon-chevron-up" (click)="openDiv0(i); openDiv2(i)"></button>
+            </div>
+            <br>
+            <div class="col-md-6 col-lg-6" >
+              <img class="img-responsive" [src]="human_story_list[i].human_story_details_more.image_more">
+            </div>
+            <div class="col-md-6 col-lg-6">
+              <p>{{human_story_list[i].human_story_details_more.content_more}}</p>
+              <button type="button" [class.hide]="isClickedOnce" (click)="openDiv2(i); isClickedOnce = true "  class="btn btn-info" >Read More</button>
+            </div>
+          </div>
+          <br>
+          <div class="row hidden-xs hidden-sm" *ngIf="showHide2[i]">
+            <div class="col-md-6 col-lg-6 pull-right">
+              <img class="img-responsive " [src]="human_story_list[i].human_story_details_less.image_less">
+            </div>
+            <div class="col-md-6 col-lg-6 pull-left">
+              <p class="">{{human_story_list[i].human_story_details_less.content_less}}</p>
+              <button type="button" (click)="openDiv2(i)" class="btn btn-info" >Read Less</button>
+            </div>
+          </div>
+          <br>
+          <div class="row image-class hidden-xs hidden-sm" *ngIf="showHide1[i] && show1 === i">
+            <div class="row">
+              <button class="btn btn-uparrow1  pull-right glyphicon glyphicon-chevron-up" (click)="openDiv1(i); openDiv3(i)"></button>
+            </div>
+            <br>
+            <div class="col-md-6 col-lg-6">
+              <img class="img-responsive" [src]="human_story_list[i+1].human_story_details_more.image_more">
+            </div>
+            <div class="col-md-6 col-lg-6">
+              <p>{{human_story_list[i+1].human_story_details_more.content_more}}</p>
+              <button type="button" [class.hide]="isClickedOnce1" (click)="openDiv3(i); isClickedOnce1 = true " class="btn btn-info" >Read More</button>
+            </div>
+          </div>
+          <br>
+          <div class="row hidden-xs hidden-sm" *ngIf="showHide3[i]">
+            <div class="col-md-6 col-lg-6 pull-right">
+              <img class="img-responsive " [src]="human_story_list[i+1].human_story_details_less.image_less">
+            </div>
+            <div class="col-md-6 col-lg-6 pull-left">
+              <p class="">{{human_story_list[i+1].human_story_details_less.content_less}}</p>
+              <button type="button" (click)="openDiv3(i)" class="btn btn-info" >Read Less</button>
+
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

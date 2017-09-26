@@ -1,0 +1,257 @@
+/**
+ * Created by rohan on 20/9/17.
+ */
+
+.image-container{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+#heading1 {
+  position: absolute;
+  font-size: 36px;
+  top: 50%;
+  width: 100%;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+#heading2 {
+  position: absolute;
+  font-size: 20px;
+  top: 55%;
+  width: 100%;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+.backimage0
+{
+  width: 100% !important;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.humanimage {
+  position: absolute;
+  top: 30%;
+  left: 46%;
+}
+
+.contentContainer {
+  font-size: 18px;
+  padding-top: 4%;
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+  width: 90%;
+}
+.imageContainer{
+  width: 100%;
+}
+.row{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.btn-uparrow{
+  margin-left: 15px !important;
+}
+.btn-uparrow1{
+  margin-right: 15px !important;
+}
+.human-wrapper0 {
+  max-width: 100%;
+  font-size: 17px;
+  position: absolute;
+  top: -90px;
+  height: 112px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 10px 2px #888888;
+}
+h1, h3{
+  color: #3596e0;
+}
+button{
+  background-color:  #017EC0;
+  border-radius: 1px;
+}
+#designation{
+  color: #3596e0;
+}
+.img-responsive{
+  cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+  #heading1{
+    font-size: 26px;
+    top: 48%;
+  }
+  #heading2{
+    font-size: 17px;
+    top: 55%;
+  }
+  .backimage1{
+    width: 100% !important;
+  }
+  .humanimage {
+    position: absolute;
+    top: 32%;
+    left: 40%;
+    height: 16%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  #heading1{
+    font-size: 30px;
+    top: 48%;
+  }
+  #heading2{
+    font-size: 19px;
+    top: 55%;
+  }
+  .backimage1{
+    width: 100% !important;
+  }
+  .humanimage {
+    position: absolute;
+    top: 32%;
+    left: 40%;
+    height: 15%;
+  }
+  .human-wrapper1 {
+    font-size: 15px !important;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+  }
+  .contentContainer {
+    font-size: 15px;
+    padding-top: 4%;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #heading1{
+    font-size: 40px;
+    top: 54%;
+  }
+  #heading2{
+    font-size: 18px;
+    top: 60%;
+  }
+  .backimage1{
+    width: 100%;
+  }
+  .humanimage {
+    position: absolute;
+    top: 32%;
+    left: 40%;
+    height: 14%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #heading1{
+    font-size: 32px;
+    top: 48%;
+  }
+  #heading2{
+    font-size: 15px;
+    top: 55%;
+  }
+  .humanimage {
+    position: absolute;
+    top: 29%;
+    left: 45%;
+    height: 16%;
+  }
+  .contentContainer {
+    position: relative;
+    font-size: 17px;
+    padding-top: 3%;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+  }
+  .human-wrapper0 {
+    width: 100%;
+    font-size: 17px;
+    position: absolute;
+    top: -90px;
+    height: 112px;
+    background: white;
+    padding: 2% 2%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+  #heading1{
+    font-size: 32px;
+    top: 46%;
+  }
+  #heading2{
+    font-size: 17px;
+    top: 52%;
+  }
+  .humanimage {
+    position: absolute;
+    top: 30%;
+    left: 46%;
+    height: 14%;
+  }
+  .contentContainer {
+    position: relative;
+    font-size: 17px;
+    padding-top: 3%;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+  }
+  .human-wrapper0 {
+    width: 100%;
+    font-size: 17px;
+    position: absolute;
+    top: -90px;
+    height: 112px;
+    margin: 0 auto;
+    background: white;
+    padding: 2% 2%;
+  }
+}
+
+
+@media (min-width: 1301px){
+  .humanimage {
+    position: absolute;
+    top: 35%;
+    left: 46%;
+    height: 14%;
+  }
+  .contentContainer {
+    position: relative;
+    font-size: 17px;
+    padding-top: 3%;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+  }
+  .human-wrapper0 {
+    width: 100%;
+    font-size: 17px;
+    position: absolute;
+    top: -90px;
+    height: 112px;
+    margin: 0 auto;
+    background: white;
+    padding: 2% 2%;
+  }
+  .backimage0{
+    width: 100% !important;
+  }
+  .image-container{
+    font-size: 21px
+  ;
+  }
+}
